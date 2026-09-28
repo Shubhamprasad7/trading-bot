@@ -1,0 +1,209 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+header {
+  background: #111827;
+  color: white;
+  padding: 24px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  margin: 0 0 5px;
+}
+
+header p {
+  margin: 0;
+  color: #cbd5e1;
+}
+
+.status {
+  padding: 10px 14px;
+  border-radius: 20px;
+  background: #374151;
+  font-size: 13px;
+}
+
+.status.on {
+  background: #166534;
+}
+
+main {
+  width: 86%;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.card,
+.panel {
+  background: white;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #64748b;
+}
+
+.card strong {
+  font-size: 26px;
+}
+
+.card p {
+  color: #64748b;
+}
+
+.buy {
+  color: white;
+  background: #15803d;
+}
+
+.sell {
+  color: white;
+  background: #b91c1c;
+}
+
+.buy,
+.sell,
+.start,
+.stop {
+  border: 0;
+  padding: 12px 22px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.start {
+  background: #2563eb;
+  color: white;
+}
+
+.stop {
+  background: #475569;
+  color: white;
+}
+
+.panel {
+  margin-top: 20px;
+}
+
+.buttons,
+.trade-form {
+  display: flex;
+  align-items: end;
+  gap: 12px;
+}
+
+.trade-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+input {
+  padding: 11px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  width: 150px;
+}
+
+.message {
+  background: #dbeafe;
+  padding: 12px;
+  margin-bottom: 18px;
+  border-radius: 7px;
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.portfolio div {
+  padding: 15px;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.portfolio span {
+  display: block;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+  background: #f8fafc;
+}
+
+.buy,
+.BUY {
+  color: #15803d;
+}
+
+.sell,
+.SELL {
+  color: #b91c1c;
+}
+
+.hold {
+  color: #ca8a04;
+}
+
+@media (max-width: 800px) {
+  .cards,
+  .portfolio {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .cards,
+  .portfolio {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
